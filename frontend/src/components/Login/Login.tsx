@@ -14,7 +14,7 @@ const Login: React.FC = () => {
 
   return (
     <Container>
-      <Box sx={{ mt: 8 }} className="login-box">
+      <Box sx={{ mt: 8 }} className='login-box'>
         <Typography variant="h4" gutterBottom>
           Login
         </Typography>
@@ -36,7 +36,7 @@ const Login: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <Button variant="contained" color="primary" type="submit" fullWidth>
+          <Button className="login-box--form__button" variant="contained" color="primary" type="submit" fullWidth>
             Login
           </Button>
         </form>
