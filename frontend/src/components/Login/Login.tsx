@@ -1,5 +1,6 @@
-import { Box, Button, Container, TextField, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import { Box, Button, Container, TextField, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import './Login.scss';
 
 const Login: React.FC = () => {
 
@@ -29,7 +30,7 @@ const Login: React.FC = () => {
             label="Password"
             type="password"
             placeholder="senha"
-            value={username}
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
 
