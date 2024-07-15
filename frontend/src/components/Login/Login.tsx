@@ -14,16 +14,17 @@ const Login: React.FC = () => {
 
   return (
     <Container>
-      <Box sx={{ mt: 8 }}>
+      <Box sx={{ mt: 8 }} className="login-box">
         <Typography variant="h4" gutterBottom>
           Login
         </Typography>
 
-        <form onSubmit={handleSubmit}>
+        <form className="login-box--form" onSubmit={handleSubmit}>
           <TextField
             label="Login"
             placeholder="Login"
             value={username}
+            className="login-box--form__input"
             onChange={(e) => setUsername(e.target.value)}
           />
           <TextField
@@ -31,6 +32,7 @@ const Login: React.FC = () => {
             type="password"
             placeholder="senha"
             value={password}
+            className="login-box--form__input"
             onChange={(e) => setPassword(e.target.value)}
           />
 

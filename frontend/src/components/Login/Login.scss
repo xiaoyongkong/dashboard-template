@@ -1,0 +1,11 @@
+login-box  {
+  display: flex;
+
+  &--form {
+    gap: 10px;
+    &__input {
+      padding: 10px;
+    }
+  }
+
+}
