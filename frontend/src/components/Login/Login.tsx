@@ -14,14 +14,14 @@ const Login: React.FC = () => {
   }
 
   return (
-    <div className="login-container">
+    <div className="login-page">
       <Container>
-        <Box sx={{ mt: 8 }} className="login-box">
+        <Box sx={{ mt: 8 }} className="form-container">
           <Typography variant="h4" gutterBottom>
             Login
           </Typography>
 
-          <form className="login-box--form" onSubmit={handleSubmit}>
+          <form className="form-container--form" onSubmit={handleSubmit}>
             <TextField
               label="Login"
               placeholder="Login"
@@ -30,7 +30,7 @@ const Login: React.FC = () => {
               fullWidth
               margin="normal"
               variant="outlined"
-              className="login-box--form__input"
+              className="form-container--form__input"
             />
             <TextField
               label="Password"
@@ -41,20 +41,20 @@ const Login: React.FC = () => {
               fullWidth
               margin="normal"
               variant="outlined"
-              className="login-box--form__input"
+              className="form-container--form__input"
             />
 
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', mt: 2 }}>
-              <Link component={RouterLink} to="/register" variant="body2" className="login-box--form__link">
+              <Link component={RouterLink} to="/register" variant="body2" className="form-container--form__link">
                 Registrar
               </Link>
-              <Link component={RouterLink} to="/forgot-password" variant="body2" className="login-box--form__link">
+              <Link component={RouterLink} to="/forgot-password" variant="body2" className="form-container--form__link">
                 Esqueci minha senha
               </Link>
             </Box>
 
             <Button
-              className="login-box--form__button"
+              className="form-container--form__button"
               variant="contained"
               color="primary"
               type="submit"
