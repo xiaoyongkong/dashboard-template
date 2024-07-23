@@ -8,18 +8,24 @@ services:
       POSTGRES_PASSWORD: root
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
 
   backend:
     build: ./backend
     container_name: backend
     volumes:
-      - ./backend:/client
+      - ./backend:/app
     ports:
       - "8000:8000"
     environment:
       - DEBUG=1
     depends_on:
       - db
+    command: >
+      sh -c "python manage.py makemigrations &&
+             python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
 
   frontend:
     build: ./frontend
