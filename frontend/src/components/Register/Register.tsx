@@ -1,5 +1,6 @@
-import { Box, Button, Container, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, Link, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import './Register.scss';
 
 const Register: React.FC = () => {
@@ -70,6 +71,16 @@ const Register: React.FC = () => {
             >
               Register
             </Button>
+
+            <Link
+              component={RouterLink}
+              to="/"
+              variant="body2"
+              className="form-container--form__link"
+              sx={{ display: 'block', textAlign: 'center', mt: 2 }}
+            >
+              Back to Login
+            </Link>
           </form>
 
           {message && (
