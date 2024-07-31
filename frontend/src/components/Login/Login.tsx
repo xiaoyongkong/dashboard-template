@@ -1,16 +1,24 @@
+// src/components/Login/Login.tsx
+
 import { Box, Button, Container, Link, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // Previna o comportamento padrão do formulário
-    console.log("a");
+    e.preventDefault();
+    // Aqui você adiciona a lógica de autenticação
+    if (username === 'admin' && password === '123') {
+      navigate('/dashboard');
+    } else {
+      setMessage('Invalid credentials');
+    }
   }
 
   return (
